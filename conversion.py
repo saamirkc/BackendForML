@@ -119,10 +119,10 @@ def ResNet_model():
     return Model(inputs=model.input, outputs=x)
 
 # Specify the path to the .h5 weights file
-weights_path = '/home/cr7karki/Downloads/final_model.h5'
+weights_path = '/home/cr7karki/Downloads/final_res_model.h5'
 
 # Specify the directory where the SavedModel should be saved
-saved_model_path = '/home/cr7karki/Downloads/saved_model_dir'
+saved_model_path = '/home/cr7karki/Downloads/saved_res_model_dir'
 
 # Print the absolute path to verify it's correct
 print(f"Loading model from: {os.path.abspath(weights_path)}")
