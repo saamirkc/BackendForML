@@ -208,11 +208,12 @@ import base64
 # model = tf.saved_model.load('/home/cr7karki/Documents/projects/samir/conversion/saved_res_model_dir')  # Path to your model
 
 
+model_path = os.path.join(os.getcwd(), 'saved_res_model_dir')
 
-print(f"Current working directory: {os.getcwd()}")
+# Load the model
+model = tf.saved_model.load(model_path)
 
-# Load your saved TensorFlow model
-model = tf.saved_model.load('./saved_res_model_dir')  # Path to your model
+
 infer = model.signatures["serving_default"]
 
 app = FastAPI()
