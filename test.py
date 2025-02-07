@@ -7,3 +7,5 @@ model = tf.saved_model.load("/home/cr7karki/Documents/projects/samir/conversion/
 # Check the input and output signatures
 print("Model input signature:", model.signatures['serving_default'].inputs)
 print("Model output signature:", model.signatures['serving_default'].outputs)
+
+
