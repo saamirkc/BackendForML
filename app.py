@@ -275,6 +275,13 @@ def overlay_bounding_box(original_image, mask, output_path, max_box_ratio=0.5, m
         cv2.imwrite(output_path, localized_image)
     return pneumonia_detected, output_path if pneumonia_detected else None
 
+
+# this is added
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Pneumonia Detection API"}
+# up to this
+
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     try:
