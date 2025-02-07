@@ -209,7 +209,7 @@ import base64
 
 
 
-
+print(f"Current working directory: {os.getcwd()}")
 
 # Load your saved TensorFlow model
 model = tf.saved_model.load('./saved_res_model_dir')  # Path to your model
