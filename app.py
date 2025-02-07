@@ -212,7 +212,7 @@ import base64
 
 
 # Load your saved TensorFlow model
-model = tf.saved_model.load('./CONVERSION/saved_res_model_dir')  # Path to your model
+model = tf.saved_model.load('./conversion/saved_res_model_dir')  # Path to your model
 infer = model.signatures["serving_default"]
 
 app = FastAPI()
