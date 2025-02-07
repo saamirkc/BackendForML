@@ -204,8 +204,15 @@ import cv2
 import os
 import base64
 
+# # Load your saved TensorFlow model
+# model = tf.saved_model.load('/home/cr7karki/Documents/projects/samir/conversion/saved_res_model_dir')  # Path to your model
+
+
+
+
+
 # Load your saved TensorFlow model
-model = tf.saved_model.load('/home/cr7karki/Documents/projects/samir/conversion/saved_res_model_dir')  # Path to your model
+model = tf.saved_model.load('./CONVERSION/saved_res_model_dir')  # Path to your model
 infer = model.signatures["serving_default"]
 
 app = FastAPI()
